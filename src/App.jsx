@@ -1,29 +1,21 @@
-import './App.css';
-
+import React from 'react'
+import Header from './components/Header'
+import About from './components/About'
+import Technologies from './components/Technologies'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Experience from './components/Experience'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Header />
+      <About />
+      <Technologies />
+      <Experience/>
+      <Projects />
+      <Contact />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
