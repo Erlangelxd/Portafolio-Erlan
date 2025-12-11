@@ -17,7 +17,7 @@ const Contact = () => {
     },
     {
       name: "LinkedIn",
-      url: "www.linkedin.com/in/erlan-angel-carrillo-bautista-24a95a299",
+      url: "https://www.linkedin.com/in/erlan-angel-carrillo-bautista-24a95a299/",
       svg: (
         <svg
           className="w-6 h-6 md:w-8 md:h-8 text-blue-500"

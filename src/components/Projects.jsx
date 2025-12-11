@@ -23,7 +23,7 @@ const Projects = () => {
       description: "Un sistema donde se pueden registrar candidatos junto a sus propuestas y los usuarios pueden elejir entre ellos.",
       technologies: "Django, SQLite, TailwindCss, Render, CloudFlare",
       image: "",
-      link: null,
+      link: "https://sistema-de-elecciones-upea.onrender.com/",
       github: null
     },
   ];
