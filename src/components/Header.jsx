@@ -19,7 +19,7 @@ const Header = () => {
     },
     {
       name: "LinkedIn",
-      url: "www.linkedin.com/in/erlan-angel-carrillo-bautista-24a95a299",
+      url: "https://www.linkedin.com/in/erlan-angel-carrillo-bautista-24a95a299/",
       color: "text-blue-500",
       icon: (
         <svg
