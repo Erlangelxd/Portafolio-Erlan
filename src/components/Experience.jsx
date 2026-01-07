@@ -8,7 +8,7 @@ const Experience = () => {
       city: "El Alto",
       country: "Bolivia",
       start: "Marzo 2025",
-      end: "Actualidad",
+      end: "Diciembre 2025",
       description: "Implementé y desarrollé actividades pedagógicas para la materia de Programación II en la carrera de Ingeniería de Sistemas."
     },
     {
