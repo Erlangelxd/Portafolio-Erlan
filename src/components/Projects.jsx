@@ -19,10 +19,10 @@ const Projects = () => {
       github: null
     },
     {
-      title: "Sistema de elecciones democraticas ",
+      title: "Sistema de votacion electoral",
       description: "Un sistema donde se pueden registrar candidatos junto a sus propuestas y los usuarios pueden elejir entre ellos.",
       technologies: "Django, SQLite, TailwindCss, Render, CloudFlare",
-      image: "",
+      image: "../assets/projects/votacion.png",
       link: "https://sistema-de-elecciones-upea.onrender.com/",
       github: null
     },
