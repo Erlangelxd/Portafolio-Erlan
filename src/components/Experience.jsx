@@ -21,13 +21,13 @@ const Experience = () => {
       description: "Optmización y correccion de sistema de generación de certificados, gestión base de datos en Excel."
     },
     {
-      company: "Ropa de mujer de pollera - Bella Mujer",
-      position: "Web Developer",
+      company: "Free Lancer",
+      position: "Software Developer",
       city: "El Alto",
       country: "Bolivia",
       start: "Noviembre 2024",
-      end: "Diciembre 2024",
-      description: "Desarrollé una pagina web responsiva que integró la ubicación, catalogo de productos y enlaces a redes de la empresa, mejorando la precensia en linea y accesibilidad de la información."
+      end: "actualidad",
+      description: "Desarrollo de sistemas de gestión para pequeñas empresas, incluyendo sistemas de reservas, ventas y administración."
     },
   ];
 
