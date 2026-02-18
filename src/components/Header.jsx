@@ -94,7 +94,7 @@ const Header = () => {
           </span>
         </h2>
         <p className="text-lg md:text-xl text-orange-400 font-medium mb-8">
-          Ing. de sistemas \ Desarrollador Web
+          Ingeniero de sistemas 
         </p>
 
         <div className="flex flex-wrap justify-center gap-5 mb-10">

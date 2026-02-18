@@ -26,6 +26,14 @@ const Projects = () => {
       link: "https://sistema-de-elecciones-upea.onrender.com/",
       github: null
     },
+    {
+      title: "Sistema de reservas online para barberias",
+      description: "Un sistema donde se pueden registrar barberías, sus servicios y los usuarios pueden reservar. Con un panel administrativo donde el administrador puede gestionar y visualizar sus ingresos y reservas.",
+      technologies: "React, Tailwind, FastAPI, Postgresql, CloudFlare, Render",
+      image: "../assets/projects/barberia.png",
+      link: "https://blessfxbarberstudio.pages.dev/",
+      github: null
+    },
   ];
 
   return (
