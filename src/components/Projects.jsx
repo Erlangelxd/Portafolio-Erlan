@@ -31,7 +31,15 @@ const Projects = () => {
       description: "Un sistema donde se pueden registrar barberías, sus servicios y los usuarios pueden reservar. Con un panel administrativo donde el administrador puede gestionar y visualizar sus ingresos y reservas.",
       technologies: "React, Tailwind, FastAPI, Postgresql, CloudFlare, Render",
       image: "../assets/projects/barberia.png",
-      link: "https://blessfxbarberstudio.pages.dev/",
+      link: "https://barberias.pages.dev/",
+      github: null
+    },
+    {
+      title: "Sistema de reservas online para salones de belleza",
+      description: "Un sistema donde se pueden registrar salones de belleza, sus servicios y los usuarios pueden reservar. Con un panel administrativo donde el administrador puede gestionar y visualizar sus ingresos y reservas.",
+      technologies: "React, Tailwind, FastAPI, Postgresql, CloudFlare, Render",
+      image: "../assets/projects/salon.jpeg",
+      link: "https://uhlala.pages.dev/",
       github: null
     },
   ];
