@@ -1,71 +1,39 @@
 import React from "react";
 
-const Experience = () => {
-  const experiences = [
-    {
-      company: "Free Lancer",
-      position: "Software Developer",
-      city: "El Alto",
-      country: "Bolivia",
-      start: "Noviembre 2024",
-      end: "Actualidad",
-      description: "Desarrollo de sistemas de gestión para pequeñas empresas, incluyendo sistemas de reservas, ventas y administración."
-    },
-    {
-      company: "Ingeniería de sistemas UPEA",
-      position: "Auxiliar de docencia (Programacion I)",
-      city: "El Alto",
-      country: "Bolivia",
-      start: "Marzo 2026",
-      end: "Actualidad",
-      description: "Implementé y desarrollé actividades pedagógicas para la materia de Programación I en la carrera de Ingeniería de Sistemas."
-    },
-    {
-      company: "Ingeniería de sistemas UPEA",
-      position: "Auxiliar de docencia (Programacion II)",
-      city: "El Alto",
-      country: "Bolivia",
-      start: "Marzo 2025",
-      end: "Diciembre 2025",
-      description: "Implementé y desarrollé actividades pedagógicas para la materia de Programación II en la carrera de Ingeniería de Sistemas."
-    },
-    {
-      company: "Ministerio de Desarrollo Rural y Tierras",
-      position: "Desarrollador con Macros Excel",
-      city: "La Paz",
-      country: "Bolivia",
-      start: "Enero 2025",
-      end: "Julio 2025",
-      description: "Optmización y correccion de sistema de generación de certificados, gestión base de datos en Excel."
-    },
-  ];
-
+const Experience = ({ t }) => {
   return (
-    <section id="experience" className="py-20 px-6 bg-[#1a1a1a] text-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-blue-500 tracking-tight">
-          Experiencia Profesional
-        </h2>
+    <section id="experience" className="bg-white px-6 py-20 text-slate-900 dark:bg-neutral-950 dark:text-white">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="text-3xl font-black tracking-tight text-blue-700 sm:text-4xl md:text-5xl dark:text-blue-400">
+            {t.experience.title}
+          </h2>
+          <p className="mt-4 text-slate-600 dark:text-slate-300">{t.experience.subtitle}</p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="bg-neutral-900 border border-neutral-700 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/30 transition-transform duration-300 hover:-translate-y-2"
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {t.experience.items.map((exp) => (
+            <article
+              key={`${exp.company}-${exp.position}-${exp.start}`}
+              className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-blue-500/50"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-blue-400 mb-2">
-                {exp.position}
-              </h3>
-              <h4 className="text-lg md:text-xl font-semibold text-white mb-1">
-                {exp.company} - {exp.city}, {exp.country}
-              </h4>
-              <p className="text-sm md:text-base text-gray-400 mb-4">
-                {exp.start} - {exp.end}
+              <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <h3 className="text-xl font-black text-slate-950 dark:text-white">{exp.position}</h3>
+                  <p className="mt-2 font-semibold text-blue-700 dark:text-blue-400">
+                    {exp.company}
+                  </p>
+                </div>
+                <span className="w-fit rounded-full bg-orange-100 px-3 py-1 text-xs font-bold text-orange-700 dark:bg-orange-500/10 dark:text-orange-300">
+                  {exp.start} - {exp.end}
+                </span>
+              </div>
+
+              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">
+                {exp.city}, {exp.country}
               </p>
-              <p className="text-gray-200 text-sm md:text-base leading-relaxed">
-                {exp.description}
-              </p>
-            </div>
+              <p className="mt-4 leading-7 text-slate-600 dark:text-slate-300">{exp.description}</p>
+            </article>
           ))}
         </div>
       </div>

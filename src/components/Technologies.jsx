@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Technologies = () => {
+const Technologies = ({ t }) => {
   const [category, setCategory] = useState("frontend");
 
   const technologies = {
@@ -11,7 +11,6 @@ const Technologies = () => {
       { name: "Bootstrap", icon: "../assets/technologies/Boot.png" },
       { name: "React", icon: "../assets/technologies/React_logo.png" },
       { name: "TailwindCSS", icon: "../assets/technologies/tailwind_logo.png" },
-      
     ],
     backend: [
       { name: "Python", icon: "../assets/technologies/Python_logo.png" },
@@ -32,52 +31,56 @@ const Technologies = () => {
     ],
   };
 
-  const categories = [
-    { id: "frontend", label: "Frontend" },
-    { id: "backend", label: "Backend" },
-    { id: "herramientas", label: "Herramientas" },
-  ];
+  const categories = Object.keys(technologies).map((id) => ({
+    id,
+    label: t.technologies.categories[id],
+  }));
 
   return (
-    <section id="technologies" className="py-20 px-6 bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-800 text-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-blue-500 tracking-tight">
-          Tecnologías
-        </h2>
+    <section
+      id="technologies"
+      className="bg-slate-50 px-6 py-20 text-slate-900 dark:bg-neutral-900 dark:text-white"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 className="text-3xl font-black tracking-tight text-blue-700 sm:text-4xl md:text-5xl dark:text-blue-400">
+              {t.technologies.title}
+            </h2>
+            <p className="mt-4 max-w-2xl text-slate-600 dark:text-slate-300">{t.technologies.subtitle}</p>
+          </div>
 
-        {/* Botones de categoría */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setCategory(cat.id)}
-              className={`py-2 px-6 rounded-full font-medium transition-all duration-300
-                ${
+          <div className="flex w-full rounded-full border border-slate-200 bg-white p-1 shadow-sm sm:w-auto dark:border-neutral-700 dark:bg-neutral-950">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setCategory(cat.id)}
+                className={`flex-1 rounded-full px-4 py-2 text-sm font-bold transition sm:flex-none ${
                   category === cat.id
-                    ? "bg-blue-600 text-white shadow-lg scale-105"
-                    : "bg-neutral-900 text-gray-300 border border-neutral-700 hover:bg-neutral-800"
+                    ? "bg-blue-600 text-white shadow-sm"
+                    : "text-slate-600 hover:text-blue-700 dark:text-slate-300 dark:hover:text-blue-300"
                 }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Grid de tecnologías */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 transition-all duration-500">
-          {technologies[category].map((tech, index) => (
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {technologies[category].map((tech) => (
             <div
-              key={index}
-              className="bg-neutral-900 border border-neutral-700 rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-blue-500/30 transition-transform duration-300 hover:-translate-y-2"
+              key={tech.name}
+              className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-blue-500/50"
             >
-              <img
-                src={tech.icon}
-                alt={tech.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain mb-4 transition-transform duration-300 hover:scale-110"
-              />
-              <span className="text-sm md:text-base font-semibold text-gray-200 hover:text-orange-400 transition-colors duration-300">
-                {tech.name}
-              </span>
+              <div className="flex aspect-square items-center justify-center rounded-xl bg-slate-50 p-4 dark:bg-neutral-900">
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  className="h-14 w-14 object-contain transition group-hover:scale-105 md:h-16 md:w-16"
+                />
+              </div>
+              <p className="mt-4 text-center text-sm font-bold text-slate-700 dark:text-slate-200">{tech.name}</p>
             </div>
           ))}
         </div>

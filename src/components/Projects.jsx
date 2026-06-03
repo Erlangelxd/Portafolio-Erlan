@@ -1,88 +1,84 @@
 import React from "react";
 
-const Projects = () => {
-  const projects = [
+const Projects = ({ t }) => {
+  const projectData = [
     {
-      title: "Web de ventas para una Pollereria (Ropa de mujer)",
-      description: "Una página web para la venta de ropa de mujer.",
       technologies: "HTML, CSS, Bootstrap, Vercel",
       image: "../assets/projects/bellaM.jpeg",
       link: "https://pollereria-bella-mujer.vercel.app",
-      github: null
+      github: null,
     },
     {
-      title: "Pondera",
-      description: "Una página web para estudiantes de la carrera ing de sistemas donde los auxiliares ponderan a sus estudiantes.",
-      technologies: "React, Tailwind, FastAPI, Postgresql, CloudFlare",
+      technologies: "React, Tailwind, FastAPI, PostgreSQL, CloudFlare",
       image: "../assets/projects/Pondera.jpeg",
       link: "https://pondera.pages.dev/",
-      github: null
+      github: null,
     },
     {
-      title: "Sistema de votacion electoral",
-      description: "Un sistema donde se pueden registrar candidatos junto a sus propuestas y los usuarios pueden elejir entre ellos.",
-      technologies: "Django, SQLite, TailwindCss, Render, CloudFlare",
+      technologies: "Django, SQLite, TailwindCSS, Render, CloudFlare",
       image: "../assets/projects/votacion.png",
       link: "https://sistema-de-elecciones-upea.onrender.com/",
-      github: null
+      github: null,
     },
     {
-      title: "Sistema de reservas online para barberias",
-      description: "Un sistema donde se pueden registrar barberías, sus servicios y los usuarios pueden reservar. Con un panel administrativo donde el administrador puede gestionar y visualizar sus ingresos y reservas.",
-      technologies: "React, Tailwind, FastAPI, Postgresql, CloudFlare, Render",
+      technologies: "React, Tailwind, FastAPI, PostgreSQL, CloudFlare, Render",
       image: "../assets/projects/barberia.png",
       link: "https://blessfxbarberstudio.pages.dev/",
-      github: null
+      github: null,
     },
   ];
 
+  const projects = projectData.map((project, index) => ({
+    ...project,
+    ...t.projects.items[index],
+  }));
+
   return (
-    <section className="py-20 px-4 bg-[#222222] text-white">
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-blue-500 tracking-tight">
-          Proyectos
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-neutral-900 border border-neutral-700 rounded-2xl overflow-hidden shadow-lg hover:shadow-blue-500/30 transition-transform duration-300 hover:-translate-y-2"
+    <section id="projects" className="bg-slate-50 px-6 py-20 text-slate-900 dark:bg-neutral-900 dark:text-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="text-3xl font-black tracking-tight text-blue-700 sm:text-4xl md:text-5xl dark:text-blue-400">
+            {t.projects.title}
+          </h2>
+          <p className="mt-4 text-slate-600 dark:text-slate-300">{t.projects.subtitle}</p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-blue-500/50"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-blue-400 mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
-                <p className="text-sm text-gray-500 mb-4">
-                  <strong>Tecnologías:</strong> {project.technologies}
+              <img src={project.image} alt={project.title} className="h-56 w-full object-cover sm:h-64" />
+              <div className="flex min-h-72 flex-col p-6">
+                <h3 className="text-2xl font-black text-slate-950 dark:text-white">{project.title}</h3>
+                <p className="mt-3 flex-1 leading-7 text-slate-600 dark:text-slate-300">{project.description}</p>
+                <p className="mt-5 text-sm text-slate-500 dark:text-slate-400">
+                  <span className="font-bold text-orange-700 dark:text-orange-300">{t.projects.technologies}:</span>{" "}
+                  {project.technologies}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-center"
+                    className="inline-flex flex-1 items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200"
                   >
-                    Ver Proyecto
+                    {t.projects.view}
                   </a>
                   {project.github && (
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-gray-800 hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 text-center"
+                      className="inline-flex flex-1 items-center justify-center rounded-full border border-slate-200 px-5 py-3 text-sm font-bold text-slate-700 transition hover:border-blue-300 hover:text-blue-700 dark:border-neutral-700 dark:text-slate-200 dark:hover:border-blue-500 dark:hover:text-blue-300"
                     >
-                      Código
+                      {t.projects.code}
                     </a>
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
