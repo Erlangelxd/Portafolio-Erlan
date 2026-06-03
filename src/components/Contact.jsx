@@ -43,7 +43,7 @@ const Contact = () => {
     },
     {
       name: "CV",
-      url: "../documentos/Erlan2025CV.pdf",
+      url: "../documentos/Erlan2026CV.pdf",
       svg: (
         <svg
           className="w-6 h-6 md:w-8 md:h-8 text-green-400"

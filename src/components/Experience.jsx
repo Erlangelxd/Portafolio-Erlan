@@ -3,6 +3,24 @@ import React from "react";
 const Experience = () => {
   const experiences = [
     {
+      company: "Free Lancer",
+      position: "Software Developer",
+      city: "El Alto",
+      country: "Bolivia",
+      start: "Noviembre 2024",
+      end: "Actualidad",
+      description: "Desarrollo de sistemas de gestión para pequeñas empresas, incluyendo sistemas de reservas, ventas y administración."
+    },
+    {
+      company: "Ingeniería de sistemas UPEA",
+      position: "Auxiliar de docencia (Programacion I)",
+      city: "El Alto",
+      country: "Bolivia",
+      start: "Marzo 2026",
+      end: "Actualidad",
+      description: "Implementé y desarrollé actividades pedagógicas para la materia de Programación I en la carrera de Ingeniería de Sistemas."
+    },
+    {
       company: "Ingeniería de sistemas UPEA",
       position: "Auxiliar de docencia (Programacion II)",
       city: "El Alto",
@@ -19,15 +37,6 @@ const Experience = () => {
       start: "Enero 2025",
       end: "Julio 2025",
       description: "Optmización y correccion de sistema de generación de certificados, gestión base de datos en Excel."
-    },
-    {
-      company: "Free Lancer",
-      position: "Software Developer",
-      city: "El Alto",
-      country: "Bolivia",
-      start: "Noviembre 2024",
-      end: "actualidad",
-      description: "Desarrollo de sistemas de gestión para pequeñas empresas, incluyendo sistemas de reservas, ventas y administración."
     },
   ];
 

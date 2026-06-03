@@ -46,22 +46,8 @@ const Header = () => {
       ),
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/erlangel_xd",
-      color: "text-orange-400",
-      icon: (
-        <svg
-          className="w-6 h-6 md:w-7 md:h-7"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M7.5 2A5.5 5.5 0 002 7.5v9A5.5 5.5 0 007.5 22h9a5.5 5.5 0 005.5-5.5v-9A5.5 5.5 0 0016.5 2h-9zm9 1.5a4 4 0 014 4v9a4 4 0 01-4 4h-9a4 4 0 01-4-4v-9a4 4 0 014-4h9zm-4.5 3A5.5 5.5 0 1017 12a5.5 5.5 0 00-5.5-5.5zm0 1.5A4 4 0 1112 16a4 4 0 010-8zm5.8-2a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" />
-        </svg>
-      ),
-    },
-    {
       name: "CV",
-      url: "../documentos/Erlan2025CV.pdf",
+      url: "../documentos/Erlan2026CV.pdf",
       color: "text-blue-400",
       icon: (
         <svg
