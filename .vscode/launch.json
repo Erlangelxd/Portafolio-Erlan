@@ -2,19 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run application",
-      "type": "node",
+      "name": "Launch Firefox",
+      "type": "firefox",
       "request": "launch",
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run-script",
-        "start"
-      ],
-      "skipFiles": [
-        "<node_internals>/**"
-      ]
+      "url": "http://localhost:3000",
+      "reAttach": true
+    },
+    {
+      "name": "Launch Vite + Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}",
+      "reAttach": true,
+      "preLaunchTask": "npm: start"
     }
   ]
 }
