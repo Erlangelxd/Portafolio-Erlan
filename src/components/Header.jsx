@@ -45,7 +45,7 @@ const Header = ({ t, theme, language, setTheme, setLanguage }) => {
     },
     {
       name: t.header.cv,
-      url: "../documentos/Erlan2026CV.pdf",
+      url: "../documentos/CV2026ErlanACarrilloBautista.pdf",
       color: "text-blue-600 dark:text-blue-400",
       icon: (
         <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
