@@ -101,9 +101,9 @@ const translations = {
           description: "Una pagina web para la venta de ropa de mujer.",
         },
         {
-          title: "Pondera",
+          title: "Aplicacion de escritorio para Farmacias",
           description:
-            "Una pagina web para estudiantes de Ingenieria de Sistemas donde los auxiliares ponderan a sus estudiantes.",
+            "Una aplicacion de escritorio para la gestion de productos e ingresos para farmacias.",
         },
         {
           title: "Sistema de votacion electoral",
@@ -218,9 +218,9 @@ const translations = {
           description: "A website for selling women's clothing.",
         },
         {
-          title: "Pondera",
+          title: "Pharmacy",
           description:
-            "A web app for Systems Engineering students where teaching assistants evaluate their students.",
+            "A desktop application for managing products and revenue in pharmacies",
         },
         {
           title: "Electoral Voting System",

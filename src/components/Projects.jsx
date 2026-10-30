@@ -9,9 +9,9 @@ const Projects = ({ t }) => {
       github: null,
     },
     {
-      technologies: "React, Tailwind, FastAPI, PostgreSQL, CloudFlare",
-      image: "../assets/projects/Pondera.jpeg",
-      link: "https://pondera.pages.dev/",
+      technologies: ".NET framework",
+      image: "../assets/projects/farmacia.jpg",
+      link: "",
       github: null,
     },
     {

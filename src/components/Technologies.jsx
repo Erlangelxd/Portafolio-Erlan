@@ -14,12 +14,13 @@ const Technologies = ({ t }) => {
     ],
     backend: [
       { name: "Python", icon: "../assets/technologies/Python_logo.png" },
-      { name: "Java", icon: "../assets/technologies/java_logo.png" },
+      { name: "C++", icon: "../assets/technologies/ISO_C++_Logo.png" },
+      { name: "C#", icon: "../assets/technologies/Csharp.png" },
       { name: "Django", icon: "../assets/technologies/django_logo.png" },
       { name: "Fast API", icon: "../assets/technologies/fastapi_logo.png" },
-      { name: "Oracle PLSQL", icon: "../assets/technologies/plsql_logo.png" },
       { name: "Supabase", icon: "../assets/technologies/supabase_logo.png" },
       { name: "PostgreSQL", icon: "../assets/technologies/postgres_logo.png" },
+      { name: "SQLite", icon: "../assets/technologies/SQLite.svg" },
     ],
     herramientas: [
       { name: "Git", icon: "../assets/technologies/Git.png" },
@@ -77,7 +78,7 @@ const Technologies = ({ t }) => {
                 <img
                   src={tech.icon}
                   alt={tech.name}
-                  className="h-14 w-14 object-contain transition group-hover:scale-105 md:h-16 md:w-16"
+                  className="h-14 w-14 object-contain drop-shadow-[0_2px_4px_rgba(15,23,42,0.45)] transition group-hover:scale-105 md:h-16 md:w-16"
                 />
               </div>
               <p className="mt-4 text-center text-sm font-bold text-slate-700 dark:text-slate-200">{tech.name}</p>
