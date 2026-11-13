@@ -21,6 +21,7 @@ const Technologies = ({ t }) => {
       { name: "Django", icon: "../assets/technologies/django_logo.png" },
       { name: "Fast API", icon: "../assets/technologies/fastapi_logo.png" },
       { name: "Next js", icon: "../assets/technologies/nextjs.png" },
+      { name: ".NET", icon: "../assets/technologies/Microsoft_NET.svg" },
       { name: "Supabase", icon: "../assets/technologies/supabase_logo.png" },
       { name: "FireBase", icon: "../assets/technologies/firebase.png" },
       { name: "PostgreSQL", icon: "../assets/technologies/postgres_logo.png" },
